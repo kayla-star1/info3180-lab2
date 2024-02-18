@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>My Profile - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/
+app.css') }}" />
+</head>
+{% block main %}
+<body>
+    <div class="container">
+        <div class="profile-box">
+            <img src="{{ url_for('static', filename='profile-pic.jpeg') }}"  class="profile-pic"/>
+            <h3>Kayla Swift</h3>
+            <p>@kayla-star</p>
+            <p>Kingstown, St.Vincent </p>
+            <p>{{ joined }}</p>
+            <div class="profile-bottom">
+                <p>I'm a proud Vincentian that enjoys travelling and interacting with people from different cultures.</p>
+            <div class="numbers">
+            <div class="item">
+                <h2>7</h2>
+                <p>Posts</p>
+            </div>
+            <div class="item">
+                <h2>100</h2>
+                <p>Following</p>
+            </div>
+            <div class="item">
+                <h2>250</h2>
+                <p>Followers</p>
+            </div>
+            </div>
+            <div class="btn">
+                <button type="button">Follow</button>
+            </div>
+            
+        </div>
+         </div>
+    </div>
+</body>
+</html>
+{% endblock %}

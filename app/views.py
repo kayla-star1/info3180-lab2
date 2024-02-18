@@ -15,7 +15,21 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Kayla Swift")
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', joined= format_date_joined(10,2,2024))
+
+import datetime
+def format_date_joined(dd,mm,yy):
+    now = datetime.datetime.now() # today's date
+    date_joined = datetime.date(yy, mm, dd) # a specific date
+    ## Format the date to return only month and year date
+    return "Joined "  + date_joined.strftime("%B, %Y")
+
+   
+
 
 
 ###
